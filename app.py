@@ -2,9 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+lst = [1]
+
 @app.route('/')
 def massive():  # put application's code here
-    lst = []
     lst.append(1)
     return "-".join(str(i) for i in lst)
 
