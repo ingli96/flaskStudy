@@ -2,10 +2,13 @@ from flask import Flask
 
 app = Flask(__name__)
 
+lst = [1]
 
 @app.route('/')
-def hello():  # put application's code here
-    return 'Hello Oleg!'
+def massive():  # put application's code here
+    lst.append(1)
+    return "-".join(str(i) for i in lst)
+
 
 
 @app.route('/abc/')
